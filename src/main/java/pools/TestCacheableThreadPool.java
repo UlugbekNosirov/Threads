@@ -7,7 +7,7 @@ public class TestCacheableThreadPool {
     public static void main(String[] args) throws InterruptedException {
         ExecutorService service = Executors.newCachedThreadPool();
 
-        Runnable runnable = ()-> {
+        Runnable runnable = () -> {
             try {
                 Thread.sleep(30);
             } catch (InterruptedException e) {
@@ -19,8 +19,5 @@ public class TestCacheableThreadPool {
         for (int i = 0; i < 1e6; i++) {
             service.execute(runnable);
         }
-
-        //Thread.sleep(5000);
-
     }
 }

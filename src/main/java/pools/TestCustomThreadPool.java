@@ -10,7 +10,5 @@ public class TestCustomThreadPool {
         ExecutorService service = new ThreadPoolExecutor(
                 10, 1000, 50,
                 TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
-
-
     }
 }
